@@ -1,0 +1,24 @@
+ALGORITHM data
+VAR
+  HASH_TABLE<integer,integer>
+  i,j,s:integer
+  existe : BOOLEAN
+  begin
+  FOR i 0 min  max   DO
+      htab.insert(i,T[i])
+  END_FOR
+  FOR j FROM 0 TO max   DO
+      htab.insert(j,T[j])
+  END_FOR
+  FOR i :=1 to (n+m) DO
+      existe:=false
+  END_FOR
+  FOR j:=i+1 to (n+m) DO
+      IF (htab.get(i)=htab.get(j)) THEN
+          existe:= true
+      END_IF
+      IF (existe:=false) THEN
+          s:=s+htab.get(i)
+      END_IF
+  END_FOR
+  END
